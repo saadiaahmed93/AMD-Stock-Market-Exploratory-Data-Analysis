@@ -47,6 +47,12 @@ Skills:
 Results and Business Recommendation:
 
 
+Analysis of 46 years of AMD stock data (11,500+ trading days) reveals exceptional long-term growth potential with total returns of 6,576% (approximately 9.6% annualized CAGR), significantly outperforming market benchmarks. However, high volatility (59.1% annualized) and maximum drawdown of -96.6% indicate this is a growth stock best suited for risk-tolerant, long-term investors. Technical analysis shows the stock is currently between its 50-day ($226.17) and 200-day ($164.86) moving averages, signaling mixed momentum. 
+
+Recommendation: For long-term investors (10+ year horizon), AMD represents a strong buy-and-hold opportunity with dollar-cost averaging to mitigate timing risk. Suggested position size: 3-5% of portfolio. Conservative investors should limit exposure to <2% or consider diversified semiconductor ETFs instead. Key entry points identified at 50-day moving average support level of $226.17 with stop-loss at $208.08 (8% below entry).
+
+
+
 Next Steps:
 
 

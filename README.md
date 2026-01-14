@@ -51,9 +51,11 @@ Analysis of 46 years of AMD stock data (11,500+ trading days) reveals exceptiona
 
 Recommendation: For long-term investors (10+ year horizon), AMD represents a strong buy-and-hold opportunity with dollar-cost averaging to mitigate timing risk. Suggested position size: 3-5% of portfolio. Conservative investors should limit exposure to <2% or consider diversified semiconductor ETFs instead. Key entry points identified at 50-day moving average support level of $226.17 with stop-loss at $208.08 (8% below entry).
 
+### Stock Price Growth Over 46 Years
 
+![AMD Stock Price Growth](images/amd_price_growth.png)
 
-Next Steps:
+*AMD stock grew from $3.15 (1980) to $210.02 (2026), a 6,576% total return*
 
 
 1. Connect to real-time market data API

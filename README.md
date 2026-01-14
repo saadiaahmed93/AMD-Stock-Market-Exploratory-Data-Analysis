@@ -65,6 +65,13 @@ Interactive Tableau Visualization
 ![AMD Technical Analysis](images/tableau_moving_averages.png)
 
 *Figure: AMD stock price with 50-day and 200-day moving averages. The interactive dashboard allows filtering by date range to explore different market periods and identify trading signals.*
+
+
+Annual Returns Analysis
+
+![AMD Yearly Returns](images/tableau_annual_returns.png)
+
+*Color-coded bar chart showing AMD's annual returns from 1980-2026. Green bars represent profitable years (27 total), red bars show losses (20 total). Notable highlights include +309.4% gain in 2016 during the data center boom and -69.7% loss during the 2008 financial crisis.*
  
 
 Next Steps:

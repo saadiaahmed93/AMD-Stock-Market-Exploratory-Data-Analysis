@@ -10,20 +10,6 @@ FROM amd_stock;
 -- last_date 2026-01-07 unique_dates 11548
 
 
--- Total return calculation
-WITH first_last AS (
-    SELECT 
-        (SELECT close FROM amd_stock ORDER BY date ASC LIMIT 1) as start_price,
-        (SELECT close FROM amd_stock ORDER BY date DESC LIMIT 1) as current_price
-)
-SELECT 
-    ROUND(start_price, 2) as starting_price,
-    ROUND(current_price, 2) as current_price,
-    ROUND(((current_price - start_price) / start_price * 100), 2) as total_return_pct
-FROM first_last;
-
---starting_price 0.0 current_price 210.02 total_return_pct null
-
 -- Top 10 best days
 SELECT 
     date, 
@@ -55,7 +41,6 @@ ORDER BY date;
 
 
 --Checking for missing values 
-
 SELECT
     COUNT(*) AS total_rows,
     COUNT(close) AS non_null_close_prices,
@@ -63,12 +48,75 @@ SELECT
 FROM amd_stock;
 
 --Average closing price
-
 SELECT
     close,
     AVG(close) AS avg_close_price_per_stock
 FROM amd_stock
 GROUP BY close
 ORDER BY avg_close_price_per_stock DESC;
+
+-- Check first few rows
+SELECT * FROM amd_stock ORDER BY date ASC LIMIT 5;
+
+-- Check last few rows 
+SELECT * FROM amd_stock ORDER BY date DESC LIMIT 5;
+
+-- Check for NULL values
+SELECT 
+    COUNT(*) as total_rows,
+    COUNT(date) as date_count,
+    COUNT(close) as close_count,
+    COUNT(*) - COUNT(date) as null_dates,
+    COUNT(*) - COUNT(close) as null_closes
+FROM amd_stock;
+
+-- Data types
+SELECT typeof(date), typeof(close) FROM amd_stock LIMIT 1;
+
+-- Start price
+SELECT close FROM amd_stock ORDER BY date ASC LIMIT 1;
+
+-- End price
+SELECT close FROM amd_stock ORDER BY date DESC LIMIT 1;
+
+-- Date range
+SELECT 
+    MIN(date) as start_date, 
+    MAX(date) as end_date 
+FROM amd_stock;
+
+--Total return calculation
+SELECT 
+    ROUND((SELECT close FROM amd_stock ORDER BY date ASC LIMIT 1), 2) as start_price,
+    ROUND((SELECT close FROM amd_stock ORDER BY date DESC LIMIT 1), 2) as end_price,
+    ROUND((
+        ((SELECT close FROM amd_stock ORDER BY date DESC LIMIT 1) - 
+         (SELECT close FROM amd_stock ORDER BY date ASC LIMIT 1)) / 
+        (SELECT close FROM amd_stock ORDER BY date ASC LIMIT 1) * 100
+    ), 0) as total_return_pct;
+
+-- Get start price
+SELECT CAST(close AS REAL) as price 
+FROM amd_stock 
+WHERE close != 'close'
+ORDER BY date ASC 
+LIMIT 1;
+--0.00
+
+-- First non-zero close price
+SELECT CAST(close AS REAL) as price, date
+FROM amd_stock 
+WHERE close != 'close' 
+  AND CAST(close AS REAL) > 0
+ORDER BY date ASC 
+LIMIT 1;
+
+-- Get end price
+SELECT CAST(close AS REAL) as price 
+FROM amd_stock 
+WHERE close != 'close'
+ORDER BY date DESC 
+LIMIT 1;
+--210.02
 
 

@@ -53,7 +53,7 @@ Recommendation: For long-term investors (10+ year horizon), AMD represents a str
 
 ### Stock Price Growth Over 46 Years
 
-![AMD Stock Price Growth](images/amd_price_growth.png) 
+![AMD Stock Price Growth](images/amd_stock_price_history copy.png) 
 
 *AMD stock grew from $3.15 (1980) to $210.02 (2026), a 6,576% total return*
 

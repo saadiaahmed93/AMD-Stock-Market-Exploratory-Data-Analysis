@@ -60,18 +60,37 @@ Stock Price Historical Performance
 *Figure 1: AMD stock price grew from $3.15 (1980) to $210.02 (2026), representing a 6,576% total return over 46 years*
 
 
+---
+
 Interactive Tableau Visualization
 
 ![AMD Technical Analysis](images/tableau_moving_averages.png)
 
 *Figure: AMD stock price with 50-day and 200-day moving averages. The interactive dashboard allows filtering by date range to explore different market periods and identify trading signals.*
 
+**Key Insights:**
+- 📈 Current price: $210.02
+- 📊 Total return: 6,576% over 46 years
+- 📉 Volatility: 59.1% annualized
+
+**[→ Explore Interactive Dashboard on Tableau Public](https://public.tableau.com/views/amd-stock-moving-averages/Sheet1)**
+
+**Tools Used:** SQLite, Excel, Tableau Public
+
+---
+
+
+---
 
 Annual Returns Analysis
 
 ![AMD Yearly Returns](images/tableau_annual_returns.png)
 
 *Color-coded bar chart showing AMD's annual returns from 1980-2026. Green bars represent profitable years (27 total), red bars show losses (20 total). Notable highlights include +309.4% gain in 2016 during the data center boom and -69.7% loss during the 2008 financial crisis.*
+
+**[→ Explore Interactive Chart on Tableau Public](https://public.tableau.com/app/profile/saadia.ahmed/viz/amd-annual-returns-analysis/Sheet1?publish=yes)**
+
+---
  
 
 Next Steps:

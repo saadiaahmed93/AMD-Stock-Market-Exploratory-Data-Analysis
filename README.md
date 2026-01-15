@@ -72,7 +72,7 @@ Interactive Tableau Visualization
 - 📊 Total return: 6,576% over 46 years
 - 📉 Volatility: 59.1% annualized
 
-**[→ Explore Interactive Dashboard on Tableau Public](https://public.tableau.com/views/amd-stock-moving-averages/Sheet1)**
+**[→ Explore Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/saadia.ahmed/viz/amd_stock_50_200/Sheet1?publish=yes)**
 
 **Tools Used:** SQLite, Excel, Tableau Public
 
